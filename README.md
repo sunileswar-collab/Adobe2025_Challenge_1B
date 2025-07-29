@@ -33,7 +33,8 @@ challenge_1b_ml/
 ├── requirements.txt
 └── README.md
 
-
+G drive Link for the sample Collections Input:
+=> link: https://drive.google.com/drive/folders/1xO7nnxjT720KtDeiv2efURhWd5UZk1GD?usp=sharing
 ---
 
 ## 📥 Input Format – `challenge1b_input.json`
@@ -82,20 +83,21 @@ Usage: Refines extracted section text and ranks relevance.
 
 📦 Note: Due to GitHub file size limits (>100MB), the model file is not included in the repo.
 
-Before building the Docker image, please ensure:
-
-[https://huggingface.co/google/flan-t5-base]
-app/models/flan-t5-base/pytorch_model.bin
+## Download Model Files
+Model files are not included in the repo.
+(https://drive.google.com/drive/folders/1B2jvjjBkfAHTfxSwQUCx_nXosneG0Iap?usp=sharing)
 is placed manually.
+Before building the Docker image, please ensure:
 
 🐳 Docker Instructions
 ✅ Build Image (Linux AMD64)
+ command to build: docker build -t persona-analyzer --platform linux/amd64 .
 
-docker build -t persona-analyzer --platform linux/amd64 .
 ✅ Run Inference (Offline CPU Mode)
 powershell
 
-docker run --rm -v ${PWD}/Collection:/app/Collection --network none persona-analyzer
+command to run: docker run --rm -v ${PWD}/Collection:/app/Collection --network none persona-analyzer
+
 📌 Constraints Met
 
 ✅ Runs fully offline (no internet required)
